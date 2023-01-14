@@ -111,7 +111,6 @@ hr {
     border: none;
     cursor: pointer;
 }
-
 .btn-primary:hover {
     background-color: var(--text);
     color: var(--background);
