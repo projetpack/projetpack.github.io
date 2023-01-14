@@ -905,7 +905,7 @@ main .main-page section.b a:hover {
     margin-right: 50px;
   }
 
-  footer div a:not(:has(i)) {
+  footer div a:not(:has(i),.producthunt-link) {
     filter: invert(100%);
   }
 
