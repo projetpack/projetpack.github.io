@@ -1,7 +1,6 @@
 # [***projetpack.github.io***](https://projectpack.github.io) <a href="https://www.producthunt.com/posts/projetpack?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-projetpack" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=375037&theme=light" alt="ProJetpack - project&#0044;&#0032;jetpack&#0044;&#0032;developers | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 ProJetpack Offical Website - Licenced in CC BY-ND 4.0
 ---
-<iframe style="border: none;" src="https://cards.producthunt.com/cards/posts/375037?v=1" width="500" height="405" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 Hello! This is ProJetpack's Offical Website v0.6!
 
