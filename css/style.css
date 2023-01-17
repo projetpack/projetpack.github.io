@@ -56,6 +56,40 @@
   }
 }
 
+@keyframes movement {
+  0% {
+    margin: 0;
+  }
+  20% {
+    margin-right: 50px;
+  }
+  50% {
+    margin: 50px;
+  }
+  70% {
+    margin-left: 50px;
+  }
+  100% {
+    margin: 0;
+  }
+}
+
+@keyframes accentTextAni {
+  0% {
+    opacity: 0;
+    display: none;
+    color: var(--primary) !important;
+  }
+  50% {
+    opacity: 1;
+    display: inline;
+    color: var(--primary) !important;
+  }
+  100% {
+    color: transparent;
+  }
+}
+
 body, html {
   scroll-behavior: smooth;
     margin: 0;
@@ -467,6 +501,89 @@ nav span.nav-btn:hover span.line {
 
 /*? INTRO */
 
+.gradient {
+  top: 0;left:0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.gradient .color-1 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 400px;
+  width: 800px;
+  border-radius: 600px 600px 0 0;
+  background-color: red;
+  filter: blur(200px);
+  animation: movement 3s infinite;
+  animation-delay: 1s;
+}
+
+.gradient .color-2 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-200%,-150%);
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: rgb(21,0,128);
+  filter: blur(200px);
+  animation: movement 3s infinite;
+  animation-delay: 2s;
+}
+
+.gradient .color-3 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(80%,-100%);
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  filter: invert(100%) blur(200px);
+  animation: movement 3s infinite;
+  animation-delay: 3s;
+}
+
+.gradient .color-4 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-200%,0%);
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-color: rgb(244, 37, 216);
+  filter: blur(200px);
+  animation: movement 3s infinite;
+  animation-delay: 4s;
+}
+
+.gradient .color-5 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(45%,-20%);
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  filter: blur(200px);
+  animation: movement 3s infinite;
+  animation-delay: 5s;
+}
+
 .intro {
     width: 100%;
     height: 90vh;
@@ -489,8 +606,11 @@ nav span.nav-btn:hover span.line {
 }
 
 .intro h1.title .accent {
-    color: var(--primary);
-}
+    color: transparent !important;
+    -webkit-text-stroke-width: 2px;
+-webkit-text-stroke-color: var(--primary);
+animation: accentTextAni 10s;
+  }
 
 .intro h3.sec {
     font-weight: 500;
@@ -509,7 +629,8 @@ nav span.nav-btn:hover span.line {
     width: 250pt;
     height: 250pt;
     border-radius: 50%;
-    z-index: 5;
+    z-index: 10;
+    pointer-events: none;
 }
 
 .intro .background-ball-b {
@@ -521,14 +642,17 @@ nav span.nav-btn:hover span.line {
     width: 250pt;
     height: 250pt;
     border-radius: 50%;
-    z-index: 5;
+    z-index: 10;
+    pointer-events: none;
 }
 
 /*? WAVES */
 
 .waves-container {
     position: absolute;
-    bottom: -70pt;
+    margin: 0;
+    padding: 0;
+    bottom: -1.8%;
     width: 100%;
 }
 
@@ -581,7 +705,7 @@ nav span.nav-btn:hover span.line {
 
   /*? MAIN PAGE */
 main .main-page {
-    margin: 50pt;
+    padding: 50pt;
     background-color: var(--background);
 }
 
@@ -894,8 +1018,12 @@ main .main-page section.b a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--background) !important;
+    background: var(--background);
     z-index: 5;
+  }
+
+  body:has(.gradient) footer {
+    background: linear-gradient(180deg,var(--background) 20%,transparent) !important;
   }
 
   footer div {

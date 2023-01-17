@@ -70,7 +70,7 @@
     <nav>
         <a href="/" class="title">
             <img alt="ProjetPack Icon Logo" src="images/logo/White Icon.svg" />
-            <a href="/" class="changelog"><span class="version">β0.6</span></a>
+            <a href="https://github.com/projetpack/Changelog.md" class="changelog"><span class="version">β0.6</span></a>
         </a>
         <a href="" class="active">Home</a>
         <a href="">About</a>
@@ -97,6 +97,13 @@
 
     <main>
        <section class="intro">
+            <div class="gradient">
+                <span class="color-1"></span>
+                <span class="color-2"></span>
+                <span class="color-3"></span>
+                <span class="color-4"></span>
+                <span class="color-5"></span>
+            </div>
             <div>
                 <h1 class="title">by Developers, <span class="accent">to Developers</span></h1>
                 <h3 class="sec">A new way to publish projects and share an idea. With in one platform across all devices.</h3>
@@ -168,13 +175,15 @@
             <p class="title">Sign Up</p>
             <div class="info">Your account details is safe with Google Firebase.</div>
             <div>
-                <label for="fullname">Your Full Name:</label>
-                <input type="text" name="sfullname" placeholder="Example: John Tengri" id="sfullname">
-                <label for="mail">Your Mail:</label>
-                <input type="email" name="smail" placeholder="Example: john@service.com" id="smail">
-                <label for="fullname">Your Password:</label>
-                <input type="password" name="spassword" placeholder="Example: 12345678 :)" id="spassword">
-                <input type="submit" class="btn-primary" style="margin-bottom: 20pt;" value="Let's begin!">
+                <form action="/signup" method="post">
+                    <label for="fullname">Your Full Name:</label>
+                    <input type="text" name="sfullname" placeholder="Example: John Tengri" id="sfullname">
+                    <label for="mail">Your Mail:</label>
+                    <input type="email" name="smail" placeholder="Example: john@service.com" id="smail">
+                    <label for="fullname">Your Password:</label>
+                    <input type="password" name="spassword" placeholder="Example: 12345678 :)" id="spassword">
+                    <input type="submit" class="btn-primary" style="margin-bottom: 20pt;" value="Let's begin!">
+                </form>
             </div>
             <div class="icons-list">
                 <i class="fa-solid fa-signature"></i>
@@ -194,11 +203,13 @@
             <p class="title">Log In</p>
             <div class="info">Your account details is safe with Google Firebase.</div>
             <div>
-                <label for="mail">Your Mail:</label>
-                <input type="email" name="lmail" placeholder="Example: john@service.com" id="lmail">
-                <label for="fullname">Your Password:</label>
-                <input type="password" name="lpassword" placeholder="Example: 12345678 :)" id="lpassword">
-                <input type="submit" class="btn-primary" style="margin-bottom: 20pt;" value="Welcome, back!">
+                <form action="/login" method="post">
+                    <label for="mail">Your Mail:</label>
+                    <input type="email" name="lmail" placeholder="Example: john@service.com" id="lmail">
+                    <label for="fullname">Your Password:</label>
+                    <input type="password" name="lpassword" placeholder="Example: 12345678 :)" id="lpassword">
+                    <input type="submit" class="btn-primary" style="margin-bottom: 20pt;" value="Welcome, back!">
+                </form>
             </div>
             <div class="icons-list">
                 <i class="fa-solid fa-at"></i>
@@ -234,7 +245,7 @@
             <a href="#"><i class="fa-solid fa-angles-up"></i></a>
         </div>
     </footer>
-
+    
     <script src="js/script.js"></script>
     <script src="js/mongodb.js"></script>
     <script>
